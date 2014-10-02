@@ -1,0 +1,14 @@
+<div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="/"><i class="ion-ios7-pulse-strong"></i> Øving S12 Martin Hagerup</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li><a href="/">Home</a></li>
+  </ul>
+  <ul ng-if="!isAuthenticated()" class="nav navbar-nav pull-right">
+    <li><a href="/#/login">Login</a></li>
+  </ul>
+  <ul ng-if="isAuthenticated()" class="nav navbar-nav pull-right">
+    <li><a ng-click="logout()" href="/login">Logout</a></li>
+  </ul>
+</div>
